@@ -3,133 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Dining Menu</title>
+    <title>Saldi Lubalu | Digital Menu Expert</title>
     <style>
-        body {
-            font-family: 'Times New Roman', serif;
-            background-color: #0c0c0c; /* Hitam mewah */
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 2px solid #d4af37; /* Garis emas */
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/dark-leather.png');
-        }
-        .header h1 {
-            color: #d4af37; /* Warna emas */
-            font-size: 32px;
-            letter-spacing: 5px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-        .header p {
-            font-style: italic;
-            font-size: 16px;
-            color: #aaa;
-        }
-        .container {
-            max-width: 450px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: #d4af37;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            font-size: 20px;
-            letter-spacing: 2px;
-        }
-        .menu-item {
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-        .menu-info {
-            flex: 1;
-        }
-        .menu-info h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #eee;
-        }
-        .menu-info p {
-            margin: 5px 0 0;
-            font-size: 13px;
-            color: #777;
-        }
-        .price {
-            font-weight: bold;
-            color: #d4af37;
-            margin-left: 15px;
-        }
-        .wa-button {
-            display: block;
-            text-align: center;
-            background: #d4af37;
-            color: #000;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.3s;
-        }
-        .footer {
-            text-align: center;
-            font-size: 11px;
-            color: #444;
-            margin-top: 40px;
-            padding-bottom: 20px;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #000; color: white; margin: 0; padding: 0; }
+        .container { max-width: 500px; margin: auto; padding: 20px; }
+        
+        /* MY SERVICES SECTION */
+        .pricing-card { border: 2px solid #00f2ff; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); margin-bottom: 40px; background: rgba(0, 242, 255, 0.05); }
+        .pricing-card h2 { color: #00f2ff; margin: 0; letter-spacing: 2px; }
+        .pricing-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+        .pricing-table th, .pricing-table td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
+        .pricing-table th { background: #0a2a2d; color: #00f2ff; font-size: 14px; }
+        
+        /* PORTFOLIO SECTION TITLE */
+        .section-header { text-align: center; margin-bottom: 20px; }
+        .section-header span { background: #d4af37; color: black; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 11px; text-transform: uppercase; }
+        
+        /* MENU PREVIEW BOXES */
+        .menu-preview { background: #0c0c0c; border: 1px solid #333; padding: 20px; border-radius: 15px; margin-bottom: 25px; transition: 0.3s; }
+        .menu-preview:hover { border-color: #d4af37; }
+        .brand-name { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; display: block; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        
+        .menu-item { display: flex; justify-content: space-between; margin: 10px 0; font-size: 15px; }
+        .price { color: #d4af37; font-weight: bold; }
+        .desc { font-size: 11px; color: #666; display: block; margin-top: -8px; margin-bottom: 10px; }
+
+        .btn-wa { display: block; text-align: center; background: linear-gradient(90deg, #00f2ff, #0072ff); color: black; text-decoration: none; padding: 16px; border-radius: 12px; font-weight: bold; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>SL22 PREMIUM</h1>
-        <p>A Taste of Perfection</p>
-    </div>
-
     <div class="container">
-        <div class="section-title">MAIN COURSE</div>
-
-        <div class="menu-item">
-            <div class="menu-info">
-                <h3>Black Angus Sirloin</h3>
-                <p>Premium beef with rosemary & garlic butter</p>
-            </div>
-            <div class="price">$55</div>
+        <div class="pricing-card">
+            <h2>SALDI LUBALU</h2>
+            <p style="color: #00f2ff; font-size: 13px; font-weight: bold; margin-top: 5px;">DIGITAL MENU DESIGN SERVICES</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr><th>PACKAGE</th><th>PRICE</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Basic Menu</td><td>Rp 80.000</td></tr>
+                    <tr><td>Standard Menu</td><td>Rp 150.000</td></tr>
+                    <tr><td>Premium Menu</td><td>Rp 250.000</td></tr>
+                </tbody>
+            </table>
+            <a href="https://wa.me/6281246140810" class="btn-wa">CHAT ME ON WHATSAPP</a>
         </div>
 
-        <div class="menu-item">
-            <div class="menu-info">
-                <h3>Lobster Thermidor</h3>
-                <p>Fresh lobster with creamy mustard sauce</p>
-            </div>
-            <div class="price">$72</div>
+        <div class="section-header">
+            <span>Client Project Showcase</span>
         </div>
 
-        <div class="menu-item">
-            <div class="menu-info">
-                <h3>Duck Confit</h3>
-                <p>Crispy duck leg with orange reduction</p>
-            </div>
-            <div class="price">$42</div>
+        <div class="menu-preview">
+            <span class="brand-name">AI-CHAN ICE CREAM</span>
+            <div class="menu-item"><span>Matcha Cone</span> <span class="price">Rp 15k</span></div>
+            <span class="desc">Japanese premium matcha with crispy waffle</span>
+            <div class="menu-item"><span>Vanilla Sundae</span> <span class="price">Rp 12k</span></div>
+            <span class="desc">Soft vanilla with chocolate syrup</span>
         </div>
 
-        <a href="https://wa.me/628XXXXXXXXXX" class="wa-button">Reserve A Table Now</a>
-        
-        <div class="footer">
-            DESIGNED BY SALDI LUBALU DESIGN
+        <div class="menu-preview">
+            <span class="brand-name">ROTI O KUPANG</span>
+            <div class="menu-item"><span>Signature Coffee Bun</span> <span class="price">Rp 15k</span></div>
+            <span class="desc">Freshly baked coffee bun with melted butter</span>
+            <div class="menu-item"><span>Pastry Cheese</span> <span class="price">Rp 20k</span></div>
+            <span class="desc">Crispy puff with premium cheddar</span>
         </div>
+
+        <div class="menu-preview">
+            <span class="brand-name">KFC KUPANG</span>
+            <div class="menu-item"><span>Super Star Box</span> <span class="price">Rp 45k</span></div>
+            <span class="desc">Chicken, Rice, Burger & Mocha Float</span>
+            <div class="menu-item"><span>OR Chicken 2 Pcs</span> <span class="price">Rp 38k</span></div>
+            <span class="desc">Original Recipe with 11 secret herbs</span>
+        </div>
+
+        <div class="menu-preview">
+            <span class="brand-name">MCDONALD'S KUPANG</span>
+            <div class="menu-item"><span>Big Mac Meal</span> <span class="price">Rp 55k</span></div>
+            <span class="desc">Double beef burger with special sauce & fries</span>
+            <div class="menu-item"><span>McSpicy Chicken</span> <span class="price">Rp 35k</span></div>
+            <span class="desc">Juicy spicy chicken breast with lettuce</span>
+        </div>
+
+        <p style="text-align: center; font-size: 10px; color: #444; margin-top: 50px; letter-spacing: 1px;">
+            © 2026 SALDI LUBALU DESIGN | KUPANG, NTT
+        </p>
     </div>
 
 </body>
