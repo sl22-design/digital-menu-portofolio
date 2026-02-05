@@ -3,88 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saldi Lubalu | Digital Menu Expert</title>
+    <title>Premium Dining Menu</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            margin: 0; 
-            background: #000; 
-            color: white; 
-            display: flex; 
-            justify-content: center; 
-            padding: 20px; 
-            align-items: center;
-            min-height: 90vh;
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #0c0c0c; /* Hitam mewah */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
         }
-        .card { 
-            background: #111; 
-            width: 100%; 
-            max-width: 360px; 
-            padding: 30px; 
-            border-radius: 25px; 
-            text-align: center; 
-            border: 2px solid #00f2fe; 
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 2px solid #d4af37; /* Garis emas */
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/dark-leather.png');
         }
-        /* Bagian Nama Tanpa Foto */
-        .profile-title {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
+        .header h1 {
+            color: #d4af37; /* Warna emas */
+            font-size: 32px;
+            letter-spacing: 5px;
+            margin: 0;
+            text-transform: uppercase;
         }
-        h1 { font-size: 28px; margin: 0; color: #00f2fe; text-transform: uppercase; letter-spacing: 2px; }
-        .tagline { font-size: 14px; color: #aaa; margin-top: 10px; font-weight: 300; }
-        
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; background: rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden; }
-        th, td { padding: 18px; border-bottom: 1px solid #222; text-align: left; }
-        th { color: #00f2fe; background: rgba(0, 242, 254, 0.1); font-size: 12px; text-transform: uppercase; }
-        td { font-size: 15px; }
-
-        .btn { 
-            display: block; 
-            background: linear-gradient(90deg, #00f2fe, #4facfe); 
-            color: #000; 
-            text-decoration: none; 
-            padding: 20px; 
-            margin-top: 35px; 
-            border-radius: 15px; 
-            font-weight: 800; 
+        .header p {
+            font-style: italic;
             font-size: 16px;
-            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+            color: #aaa;
+        }
+        .container {
+            max-width: 450px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+        .section-title {
+            text-align: center;
+            color: #d4af37;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .menu-item {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .menu-info {
+            flex: 1;
+        }
+        .menu-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #eee;
+        }
+        .menu-info p {
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: #777;
+        }
+        .price {
+            font-weight: bold;
+            color: #d4af37;
+            margin-left: 15px;
+        }
+        .wa-button {
+            display: block;
+            text-align: center;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: 0.3s;
+        }
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #444;
+            margin-top: 40px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="profile-title">
-            <h1>SALDI LUBALU</h1>
-            <p class="tagline">PROFESSIONAL DIGITAL MENU DESIGNER</p>
-        </div>
-        
-        <table>
-            <tr>
-                <th>SERVICE PLAN</th>
-                <th>PRICE</th>
-            </tr>
-            <tr>
-                <td>Basic Design</td>
-                <td>Rp 80.000</td>
-            </tr>
-            <tr>
-                <td>Standard Design</td>
-                <td>Rp 150.000</td>
-            </tr>
-            <tr>
-                <td>Premium Design</td>
-                <td>Rp 250.000</td>
-            </tr>
-        </table>
+    <div class="header">
+        <h1>SL22 PREMIUM</h1>
+        <p>A Taste of Perfection</p>
+    </div>
 
-        <a href="https://api.whatsapp.com/send?phone=6281246524846&text=Hi%20Saldi,%20I'm%20interested%20in%20your%20design%20service" class="btn">
-            HIRE ME ON WHATSAPP
-        </a>
+    <div class="container">
+        <div class="section-title">MAIN COURSE</div>
+
+        <div class="menu-item">
+            <div class="menu-info">
+                <h3>Black Angus Sirloin</h3>
+                <p>Premium beef with rosemary & garlic butter</p>
+            </div>
+            <div class="price">$55</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-info">
+                <h3>Lobster Thermidor</h3>
+                <p>Fresh lobster with creamy mustard sauce</p>
+            </div>
+            <div class="price">$72</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-info">
+                <h3>Duck Confit</h3>
+                <p>Crispy duck leg with orange reduction</p>
+            </div>
+            <div class="price">$42</div>
+        </div>
+
+        <a href="https://wa.me/628XXXXXXXXXX" class="wa-button">Reserve A Table Now</a>
+        
+        <div class="footer">
+            DESIGNED BY SALDI LUBALU DESIGN
+        </div>
     </div>
 
 </body>
