@@ -1,96 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saldi Lubalu | Digital Menu Expert</title>
+    <title>Saldi Lubalu - Premium Task Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #000; color: white; margin: 0; padding: 0; }
-        .container { max-width: 500px; margin: auto; padding: 20px; }
-        
-        /* MY SERVICES SECTION */
-        .pricing-card { border: 2px solid #00f2ff; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); margin-bottom: 40px; background: rgba(0, 242, 255, 0.05); }
-        .pricing-card h2 { color: #00f2ff; margin: 0; letter-spacing: 2px; }
-        .pricing-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
-        .pricing-table th, .pricing-table td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
-        .pricing-table th { background: #0a2a2d; color: #00f2ff; font-size: 14px; }
-        
-        /* PORTFOLIO SECTION TITLE */
-        .section-header { text-align: center; margin-bottom: 20px; }
-        .section-header span { background: #d4af37; color: black; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 11px; text-transform: uppercase; }
-        
-        /* MENU PREVIEW BOXES */
-        .menu-preview { background: #0c0c0c; border: 1px solid #333; padding: 20px; border-radius: 15px; margin-bottom: 25px; transition: 0.3s; }
-        .menu-preview:hover { border-color: #d4af37; }
-        .brand-name { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; display: block; border-bottom: 1px solid #222; padding-bottom: 5px; }
-        
-        .menu-item { display: flex; justify-content: space-between; margin: 10px 0; font-size: 15px; }
-        .price { color: #d4af37; font-weight: bold; }
-        .desc { font-size: 11px; color: #666; display: block; margin-top: -8px; margin-bottom: 10px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-        .btn-wa { display: block; text-align: center; background: linear-gradient(90deg, #00f2ff, #0072ff); color: black; text-decoration: none; padding: 16px; border-radius: 12px; font-weight: bold; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        body {
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+        }
+
+        .header-bar {
+            background: #2563eb;
+            height: 6px;
+            width: 80px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1e293b;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .sub-name {
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .service-category {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .category-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        .price { font-weight: 700; color: #0f172a; }
+
+        .skripsi-premium {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+        }
+
+        /* Bagian Pembayaran DANA */
+        .payment-section {
+            background: #f0f9ff;
+            border: 1px dashed #3b82f6;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .payment-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .dana-info {
+            font-size: 16px;
+            font-weight: 800;
+            color: #111827;
+            letter-spacing: 1px;
+        }
+
+        .dana-label {
+            font-size: 10px;
+            color: #2563eb;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #22c55e;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-wa:hover { transform: scale(1.02); background: #16a34a; }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            font-size: 9px;
+            color: #94a3b8;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="pricing-card">
-            <h2>SALDI LUBALU</h2>
-            <p style="color: #00f2ff; font-size: 13px; font-weight: bold; margin-top: 5px;">DIGITAL MENU DESIGN SERVICES</p>
-            
-            <table class="pricing-table">
-                <thead>
-                    <tr><th>PACKAGE</th><th>PRICE</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Basic Menu</td><td>Rp 80.000</td></tr>
-                    <tr><td>Standard Menu</td><td>Rp 150.000</td></tr>
-                    <tr><td>Premium Menu</td><td>Rp 250.000</td></tr>
-                </tbody>
-            </table>
-            <a href="https://wa.me/6281246524846" class="btn-wa">CHAT ME ON WHATSAPP</a>
-        </div>
+<div class="card">
+    <div class="header-bar"></div>
+    <h1 class="name">SALDI LUBALU</h1>
+    <p class="sub-name">Professional Document & Academic Support</p>
 
-        <div class="section-header">
-            <span>Client Project Showcase</span>
-        </div>
-
-        <div class="menu-preview">
-            <span class="brand-name">AI-CHAN ICE CREAM</span>
-            <div class="menu-item"><span>Matcha Cone</span> <span class="price">Rp 15k</span></div>
-            <span class="desc">Japanese premium matcha with crispy waffle</span>
-            <div class="menu-item"><span>Vanilla Sundae</span> <span class="price">Rp 12k</span></div>
-            <span class="desc">Soft vanilla with chocolate syrup</span>
-        </div>
-
-        <div class="menu-preview">
-            <span class="brand-name">ROTI O KUPANG</span>
-            <div class="menu-item"><span>Signature Coffee Bun</span> <span class="price">Rp 15k</span></div>
-            <span class="desc">Freshly baked coffee bun with melted butter</span>
-            <div class="menu-item"><span>Pastry Cheese</span> <span class="price">Rp 20k</span></div>
-            <span class="desc">Crispy puff with premium cheddar</span>
-        </div>
-
-        <div class="menu-preview">
-            <span class="brand-name">KFC KUPANG</span>
-            <div class="menu-item"><span>Super Star Box</span> <span class="price">Rp 45k</span></div>
-            <span class="desc">Chicken, Rice, Burger & Mocha Float</span>
-            <div class="menu-item"><span>OR Chicken 2 Pcs</span> <span class="price">Rp 38k</span></div>
-            <span class="desc">Original Recipe with 11 secret herbs</span>
-        </div>
-
-        <div class="menu-preview">
-            <span class="brand-name">MCDONALD'S KUPANG</span>
-            <div class="menu-item"><span>Big Mac Meal</span> <span class="price">Rp 55k</span></div>
-            <span class="desc">Double beef burger with special sauce & fries</span>
-            <div class="menu-item"><span>McSpicy Chicken</span> <span class="price">Rp 35k</span></div>
-            <span class="desc">Juicy spicy chicken breast with lettuce</span>
-        </div>
-
-        <p style="text-align: center; font-size: 10px; color: #444; margin-top: 50px; letter-spacing: 1px;">
-            © 2026 SALDI LUBALU DESIGN | KUPANG, NTT
-        </p>
+    <div class="service-category">
+        <span class="category-title">Administrasi & Ketik</span>
+        <div class="item"><span>Jasa Ketik Cepat</span> <span class="price">10rb</span></div>
+        <div class="item"><span>Rapikan Word & Excel</span> <span class="price">10rb</span></div>
+        <div class="item"><span>Input Data Excel</span> <span class="price">15rb</span></div>
     </div>
+
+    <div class="service-category">
+        <span class="category-title">Tugas Sekolah / Kuliah</span>
+        <div class="item"><span>Semua Jurusan</span> <span class="price">10rb - 20rb</span></div>
+    </div>
+
+    <div class="service-category skripsi-premium">
+        <span class="category-title" style="color: #1e40af;">🎓 Program Skripsi</span>
+        <div class="item"><span>Cari Judul Skripsi</span> <span class="price">30rb</span></div>
+        <div class="item"><span style="font-weight: 600;">Panduan Full Akhir</span> <span class="price">250rb</span></div>
+    </div>
+
+    <div class="payment-section">
+        <span class="payment-title">Metode Pembayaran</span>
+        <div class="dana-label">🔵 DANA</div>
+        <div class="dana-info">0812-4652-4846</div>
+        <div style="font-size: 11px; color: #64748b; margin-top: 5px;">a.n Saldi Lubalu</div>
+    </div>
+    
+    <a href="https://wa.me/6281246524846?text=Halo%20Saldi,%20saya%20sudah%20lihat%20harganya.%20Bisa%20bantu%20tugas%20saya?" class="btn-wa">
+        Chat via WhatsApp
+    </a>
+
+    <div class="footer">
+        <span>✓ RAPI</span>
+        <span>✓ PRIVASI AMAN</span>
+        <span>✓ TEPAT WAKTU</span>
+    </div>
+</div>
 
 </body>
 </html>
